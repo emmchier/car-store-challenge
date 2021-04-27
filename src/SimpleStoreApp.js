@@ -1,9 +1,8 @@
 import React from 'react';
+import { AppRouter } from './router/AppRouter';
 
 export const SimpleStoreApp = () => {
     return (
-        <div className="container">
-            <h2>Simple Store App</h2>
-        </div>
+        <AppRouter />
     )
 }

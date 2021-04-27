@@ -1,0 +1,54 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden !important;
+  }
+  
+  main {
+    width: 100%;
+  }
+
+  section {
+      height: 100vh;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header {
+    width: 100%;
+    height: 60vh !important;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  /* oculto borde selected bootstrap de todos los componentes */
+  *:focus,
+  button:focus,
+  .form-control:focus {
+    outline: none !important;
+    outline: 0 !important;
+    outline: hidden !important;
+    box-shadow: none !important;
+  }
