@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Redirect
+    //Redirect
   } from "react-router-dom";
   
 import { DetailScreen } from '../components/pages/DetailScreen';
@@ -19,9 +19,9 @@ export const AppRouter = () => {
             <Switch>
               <Route exact path="/" component={ HomeScreen } />
               <Route exact path="/store" component={ StoreScreen } />
-              <Route exact path="/cars/model:id" component={ DetailScreen } />
+              <Route exact path="/car/:id" component={ DetailScreen } />
               
-              <Redirect exact path="/" />
+              {/* <Redirect exact path="/" /> */}
             </Switch>
             <Footer />
         </Router>

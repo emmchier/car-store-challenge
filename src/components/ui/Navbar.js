@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <button 
                 className="navbar-toggler" 
                 type="button" 
@@ -34,10 +34,10 @@ export const Navbar = () => {
                         </NavLink>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <form className="form-inline my-2 my-lg-0">
                     <i className="material-icons">search</i>
                     <input 
-                        class="form-control mr-sm-2" 
+                        className="form-control mr-sm-2" 
                         type="search" 
                         placeholder="Search" 
                         aria-label="Search" />
