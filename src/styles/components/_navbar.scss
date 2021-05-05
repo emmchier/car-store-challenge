@@ -1,0 +1,70 @@
+.navbar {
+    height: auto !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    transition: .3s ease-in-out;
+
+    &.showBackground {
+        transition: .3s ease-in-out;
+        background-color: $whiteColor !important;
+    }
+
+    .navbar-brand {
+        padding: 0 !important;
+        height: 90px !important;
+        width: 90px !important;
+        transition: .3s ease-in-out;
+
+        &.resizeLogo {
+            height: 70px !important;
+            width: 70px !important;
+            transition: .3s ease-in-out;
+        }
+    }
+
+    .navbar-nav {
+
+        .nav-item {
+            padding: 0 8px;
+        }
+
+        .nav-link{
+            color: $secondaryColor !important;
+            font-weight: bold !important;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                color: $primaryColor !important;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+    
+    .navbar__search-bar {
+        height: 100% !important;
+        margin-right: 15px;
+        width: 25% !important;
+        
+        form {
+            background-color: $whiteColor;
+            border-radius: 10px;
+            padding: 15px 0;
+
+            i {
+                position: absolute !important;
+                margin-left: 10px;
+            }
+
+            .form-control {
+                width: 100% !important;
+                border: none !important;
+                cursor: pointer;
+                font-size: 14px;
+                margin-left: 35px;
+                
+            }
+
+        }
+    }
+    
+}

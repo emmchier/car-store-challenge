@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import Logo from '../../assets/brand-logo.svg';
+
 export const Navbar = () => {
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className={ 
+            scrollPosition > 0 
+            ? 'navbar fixed-top navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-expand-lg showBackground main-elevation' 
+            : 'navbar fixed-top navbar-expand-lg navbar-light bg-light' }>
             <button 
                 className="navbar-toggler" 
                 type="button" 
@@ -15,7 +35,11 @@ export const Navbar = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <Link className="navbar-brand" to="/">LOGO</Link>
+                <Link 
+                    className={ scrollPosition > 0 ? 'navbar-brand resizeLogo' : 'navbar-brand' } 
+                    to="/">
+                    <img src={ Logo } />
+                </Link>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item">
                         <NavLink 
@@ -34,14 +58,16 @@ export const Navbar = () => {
                         </NavLink>
                     </li>
                 </ul>
-                <form className="form-inline my-2 my-lg-0">
-                    <i className="material-icons">search</i>
-                    <input 
-                        className="form-control mr-sm-2" 
-                        type="search" 
-                        placeholder="Search" 
-                        aria-label="Search" />
-                </form>
+                <div className="navbar__search-bar">
+                    <form className="form-inline my-2 my-lg-0">
+                        <i className="material-icons reverse">search</i>
+                        <input 
+                            className="form-control mr-sm-2" 
+                            type="search" 
+                            placeholder="BUSCAR POR MODELO O VEHÍCULO" 
+                            aria-label="Search" />
+                    </form>
+                </div>
             </div>
         </nav>
     )

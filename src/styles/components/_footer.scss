@@ -1,10 +1,42 @@
 footer {
     background-color: $blackColor;
+
+    .footer-content {
+        padding: 50px 30px 0;
+    }
     
     h1, 
     h2, 
-    h3,
-    li {
-        color: $whiteColor;
+    li a {
+        color: $secondaryLightColor !important;
     } 
+
+    h2, h3 {
+        font-size: 25px !important;
+    }
+
+    h2 {
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    .subtitle {
+        color: $secondaryLightColor !important;
+        opacity: 1;
+    }
+
+    h3,
+    .copyright {
+        color: $secondaryLightColor !important;
+        opacity: .7;
+    }
+
+    hr {
+        background-color: $secondaryColor;
+        opacity: .7;
+    }
+
+    .footer__social-media li {
+        padding: 0 8px !important;
+    }
 }

@@ -1,8 +1,10 @@
 @import './base/base';
-@import './base/helpers';
+@import './base/acuarel';
 @import './base/customs';
 @import './base/theme';
 
 // Components
 
 @import './components/footer';
+@import './components/home-screen';
+@import './components/navbar';

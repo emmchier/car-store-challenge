@@ -1,44 +1,24 @@
 @import './theme';
 
 .custom-btn {
-    height: auto;
-    font-size: 24px;
-    background-color: $disableBackground;
-    border-radius: 25px !important;
+    font-size: 16px;
+    background-color: $primaryColor;
     border: none;
-    padding: 8px 25px 8px 25px !important;
-    color: $primaryColor;
+    padding: 20px 35px !important;
+    color: $whiteColor;
   
     &:hover,
     &:active,
     &:focus {
-      background-color: $btnActiveBackground;
       transition: 0.3s ease-in-out;
-      color: $primaryDarkColor;
+      background-color: $primaryColor;
+      color: $whiteColor;
     }
   
     &.hover-active:hover {
-      background-color: $secondaryColor;
+      background-color: $primaryDarkColor;
       transition: 0.3s ease-in-out;
       color: $whiteColor;
     }
-  }
-  
-  .custom-fab-btn {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    border-color: $primaryLightColor;
-    border-radius: 50%;
-    color: $primaryLightColor;
-    margin-left: 15px;
-  
-    &:hover,
-    &:active,
-    &:focus {
-      transition: 0.1s ease-in;
-      border-color: $primaryDarkColor;
-      color: $primaryDarkColor;
-      background-color: transparent;
-    }
+
   }
