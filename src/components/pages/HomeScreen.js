@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { getString } from '../../strings/getString';
 import { CustomBtn } from '../ui/customs/CustomBtn';
 
 export const HomeScreen = () => {
@@ -15,7 +17,7 @@ export const HomeScreen = () => {
                     </p>
                     <CustomBtn
                         to={ '/store' }
-                        btnTitle={ 'INGRESAR A NISSAN STORE' } 
+                        btnTitle={ getString.home_btn_enter_store_title } 
                         isHover={ true } 
                         classes={ 'btn-home' }
                         btnIcon={ 'arrow_forward' }

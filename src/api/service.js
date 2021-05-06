@@ -1,6 +1,8 @@
+import { getString } from "../strings/getString";
+
 // base url API
-const BASE_URL = 'https://4my1q6hsyo.api.quickmocker.com/';
-const TOKEN = 'qwertyuiopasdfghjklzxcvbnm123456';
+const BASE_URL = getString.productsBaseUrl;
+const TOKEN = getString.token;
 
 // headers
 const headers = new Headers();
@@ -59,7 +61,6 @@ export const getCarById = async ( carId ) => {
     try {
         const result = await fetch(`${ BASE_URL }/product/${ carId }`, parameters);
         const car = await result.json();
-        // console.log(car);
         return {
             id: car.id,
             model: car.model,

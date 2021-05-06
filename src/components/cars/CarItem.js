@@ -1,29 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { getString } from '../../strings/getString';
+import { CustomBtn } from '../ui/customs/CustomBtn';
 
 export const CarItem = ( props ) => {
 
     const {
         id,
         model,
-        year,
         amount,
-        currency,
-        gallery,
-        detail,
-        specs
+        gallery
     } = props;
-
-    const imageBaseUrl = 'https://s3.sa-east-1.amazonaws.com/simplimotos-stg.com/';
-
+    
     return (
         <div className="col-sm col-md-4">
            <div className="card">
-                <img src={ `${imageBaseUrl + detail.main_image.thumbnail}` } className="card-img-top" alt="imagen ilustrativa del auto" />
+                <img 
+                    src={ getString.imagesBaseUrl + gallery[1].large } 
+                    className="card-img-top" 
+                    alt="imagen ilustrativa del auto" 
+                />
                 <div className="card-body">
-                    <h5 className="card-title">{ model }</h5>
-                    <p className="card-text">{ detail.main_description }</p>
-                    <Link to={ `./cars/${ id }` } className="btn btn-primary">VER DETALLES DEL MODELO</Link>
+                    <h2 className="card-title item__car-model">{ model }</h2>
+                    <hr></hr>
+                    <div className="item_car-amount-container alignX pushAside">
+                        <p>{ getString.item_price_since }</p>
+                        <p className="card-text">{ getString.item_currency } { amount }</p>
+                    </div>
+                    <hr></hr>
+                    <CustomBtn 
+                        btnTitle={ getString.item_btn_detail_title }
+                        isHover={ false }
+                        classes={ 'btn-detail' }
+                        to={ `./cars/${ id }` }
+                        btnIcon={ 'arrow_forward' }
+                        isIconVisible={ true }
+                    />
+                    <p className="card-text">{ getString.item_image_description }</p>
                 </div>
             </div>
         </div>

@@ -37,7 +37,6 @@ export const Navbar = () => {
                 aria-controls="navbarTogglerDemo01" 
                 aria-expanded="false" 
                 aria-label="Toggle navigation">
-                {/* <span className="navbar-toggler-icon"></span> */}
                 <span className="navbar-toggler-icon">   
                     <i className="material-icons burguer-icon">menu</i>
                 </span>
@@ -68,7 +67,8 @@ export const Navbar = () => {
                             className="form-control mr-sm-2" 
                             type="search" 
                             placeholder="BUSCAR POR MODELO O VEHÍCULO" 
-                            aria-label="Search" />
+                            aria-label="Search"
+                            autoComplete="off" />
                     </form>
                 </div>
             </div>
