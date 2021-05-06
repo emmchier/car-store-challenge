@@ -6,9 +6,13 @@ export const StoreScreen = () => {
     const [ cars ] = useState( [ '' ] );
 
     return (
-        <section>
+        <section className="store-screen">
+            <div className="store__banner">
+                <div className="container">
+                    <h2>¿CUÁL VA A SER TU PRÓXIMO NISSAN?</h2>
+                </div>
+            </div>
             <div className="container">
-                <h2>Store Screen</h2>
                 {
                     cars.map( car => 
                         <CarList 

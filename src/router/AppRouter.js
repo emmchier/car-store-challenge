@@ -19,7 +19,7 @@ export const AppRouter = () => {
             <Switch>
               <Route exact path="/" component={ HomeScreen } />
               <Route exact path="/store" component={ StoreScreen } />
-              <Route exact path="/car/:id" component={ DetailScreen } />
+              <Route exact path="/cars/:carId" component={ DetailScreen } />
               
               {/* <Redirect exact path="/" /> */}
             </Switch>

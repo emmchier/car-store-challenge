@@ -1,28 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router';
-import { getCarById } from '../../api/service';
+import { useFetchCarById } from '../../hooks/useFetchCarById';
 
 export const DetailScreen = () => {
 
-    const carId = useParams();
+    const { carId } = useParams(); 
 
-    const [ state, setState ] = useState({});
+    const car = useFetchCarById( carId );
 
-    useEffect( ()=> {
-        getCarById(carId)
-            .then( car => {
-                setState({
-                    data: car
-                });
-            })
-    }, []);
+    const { 
+        id,
+        model,
+        year,
+        amount,
+        currency,
+        gallery,
+        detail,
+        specs
+     } = car;
 
-    console.log(state);
+    
+
+    const imageBaseUrl = 'https://s3.sa-east-1.amazonaws.com/simplimotos-stg.com/';
+
+    if (!detail) {
+        return <section>cargando</section>;
+    }
+
+    console.log(detail);
 
     return (
         <section>
             <div className="container">
-                <h2>hola</h2>
+              
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                {/* <img src={ `${imageBaseUrl + detail.main_image.thumbnail}` } alt="imagen ilustrativa del auto" /> */}
+
+                <p> { detail.main_description } </p>
+                <p> { model } </p>
+                <p> { year } </p>
+                <p> { amount } </p>
+                <p> { currency } </p>
+                <p> { detail.main_description } </p>
+                <p> { detail.description } </p>
+                <p> { detail.price.amount } </p>
+                <p> { detail.version_code } </p>
+              
+                
             </div>
         </section>
     )

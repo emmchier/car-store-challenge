@@ -1,11 +1,29 @@
+@mixin shadow($box-shadow1, $box-shadow2, $box-shadow3) {
+  -webkit-box-shadow: $box-shadow1, $box-shadow2, $box-shadow3;
+          box-shadow: $box-shadow1, $box-shadow2, $box-shadow3;
+}
+
+@mixin shadow-none($box-shadow-none) {
+  -webkit-box-shadow: $box-shadow-none;
+          box-shadow: $box-shadow-none;
+}
+
+@mixin getShadow {
+  @include shadow(
+    0 8px 17px 2px rgba(26, 25, 25, 0.023), 
+    0 3px 14px 2px rgba(0, 0, 0, 0.064), 
+    0 5px 5px -3px rgba(0, 0, 0, 0.064) !important);
+}
+
 .main-elevation {
-    -webkit-box-shadow: 0 8px 17px 2px rgba(26, 25, 25, 0.023), 0 3px 14px 2px rgba(0, 0, 0, 0.064), 0 5px 5px -3px rgba(0, 0, 0, 0.064) !important;
-            box-shadow: 0 8px 17px 2px rgba(26, 25, 25, 0.023), 0 3px 14px 2px rgba(0, 0, 0, 0.064), 0 5px 5px -3px rgba(0, 0, 0, 0.064) !important;
+  @include shadow(
+    0 8px 17px 2px rgba(26, 25, 25, 0.023), 
+    0 3px 14px 2px rgba(0, 0, 0, 0.064), 
+    0 5px 5px -3px rgba(0, 0, 0, 0.064) !important);
 }
 
 .no-elevation {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
+  @include shadow-none(none !important);
 }
 
 .full-rounded {
@@ -17,11 +35,26 @@
   align-items: center !important;
 }
 
-.reverse {
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
+@mixin reverse($scale) {
+  -moz-transform: $scale;
+  -webkit-transform: $scale;
+  -o-transform: $scale;
+  transform: $scale;
+}
+
+.reverseX {
+  @include reverse(scaleX(-1));
+}
+
+.reverseY {
+  @include reverse(scaleY(-1));
+}
+
+@mixin aligment($align-items) {
+  -webkit-align-items: $align-items;
+    -webkit-box-align: $align-items;
+       -ms-flex-align: $align-items;
+          align-items: $align-items;
 }
 
 .centerMiddle {
@@ -29,8 +62,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  @include aligment(center);
+}
+
+* {
+  transition: .1s ease-in-out !important;
 }

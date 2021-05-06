@@ -63,8 +63,78 @@
                 margin-left: 35px;
                 
             }
-
         }
     }
-    
+}
+
+@media #{$mobile} {
+
+    .navbar,
+    .navbar-collapse {
+        background-color: $primaryColor !important;
+    }
+
+    .navbar-collapse {
+        padding: 15px 20px;
+
+        .navbar__search-bar {
+            width: 100% !important;
+
+            form {
+                padding: 5px;
+
+                .form-control::placeholder {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .navbar {
+
+        &.showBackground {
+            transition: .3s ease-in-out;
+            background-color: $primaryColor !important;
+        }
+
+        .nav-item {
+            margin-left: 0 !important;
+
+            .nav-link {
+                padding: 20px 0;
+                color: $whiteColor !important;
+
+                &:hover {
+                    color: $whiteColor !important;
+                }
+            }
+        }
+
+        .navbar-brand {
+            height: 60px !important;
+            width: 60px !important;
+
+            &.resizeLogo {
+                height: 60px !important;
+                width: 60px !important;
+            }
+        }
+
+        .navbar-toggler {
+            border: none;
+
+            .navbar-toggler-icon {
+                position: absolute !important;
+                margin: 15px !important;
+                top: 0;
+                right: 0;
+                background-image: url("") !important;
+
+                .burguer-icon {
+                    color: $whiteColor;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
 }

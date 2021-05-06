@@ -23,7 +23,7 @@ export const CarItem = ( props ) => {
                 <div className="card-body">
                     <h5 className="card-title">{ model }</h5>
                     <p className="card-text">{ detail.main_description }</p>
-                    <Link to={ `./car/${ id }` } className="btn btn-primary">VER DETALLES DEL MODELO</Link>
+                    <Link to={ `./cars/${ id }` } className="btn btn-primary">VER DETALLES DEL MODELO</Link>
                 </div>
             </div>
         </div>

@@ -44,3 +44,63 @@
         margin-left: 50px;
     }
 }
+
+// media queries
+@media #{$mobile} {
+
+    .home-screen {
+        padding-top: 80px;
+        background-position: initial;
+    }
+    
+    h1 {
+        font-size: 40px !important;
+
+        span {
+            display: block;
+        }
+    }
+
+    .home-content-description {
+        font-size: 20px !important;
+        margin-top: 10px;
+        margin-bottom: 40px !important;
+
+        h2, span {
+            font-size: 20px;
+            display: inline !important;
+        }
+    }
+
+    .btn-home {
+        width: 100% !important;
+
+        &:hover {
+            background-color: $primaryColor;
+        }
+    }
+
+}
+
+@media #{$galaxy5} {
+    .btn-home {
+        font-size: 14px;
+        line-height: 25px !important;
+    }
+}
+
+@media #{$iPhone5} {
+    .btn-home {
+        font-size: 12px;
+        line-height: 25px !important;
+        padding: 15px 20px !important;
+    }
+}
+
+@media #{$iPhoneX} {
+    .btn-home {
+        font-size: 12px;
+        line-height: 25px !important;
+        padding: 15px 20px !important;
+    }
+}

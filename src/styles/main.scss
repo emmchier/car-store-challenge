@@ -1,10 +1,15 @@
+// base styles
+
 @import './base/base';
 @import './base/acuarel';
 @import './base/customs';
 @import './base/theme';
+@import './base/media-queries'; 
 
 // Components
 
 @import './components/footer';
 @import './components/home-screen';
 @import './components/navbar';
+@import './components/store';
+@import './components/filter-bar';

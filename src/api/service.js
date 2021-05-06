@@ -58,8 +58,19 @@ export const getCarById = async ( carId ) => {
 
     try {
         const result = await fetch(`${ BASE_URL }/product/${ carId }`, parameters);
-        const data = await result.json();
-        return data;
+        const car = await result.json();
+        // console.log(car);
+        return {
+            id: car.id,
+            model: car.model,
+            year: car.year,
+            amount: car.amount,
+            currency: car.currency,
+            gallery: car.gallery,
+            detail: car.detail,
+            specs: car.specs
+        }
+        
     } catch (error) {
         console.log('error get car by id', error);
     }

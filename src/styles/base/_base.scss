@@ -1,16 +1,21 @@
+@mixin borderBox($border-box) {
+  -webkit-box-sizing: $border-box;
+  -moz-box-sizing: $border-box;
+  box-sizing: $border-box;
+}
+
 html, body {
     width: 100vw;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include borderBox(border-box);
+    margin: 0;
+    padding: 0;
   }
   
   body {
-    margin: 0;
     overflow-x: hidden !important;
   }
   
@@ -24,6 +29,10 @@ html, body {
   
   img {
     width: 100%;
+  }
+
+  a {
+    text-decoration: none !important;
   }
   
   .container {
