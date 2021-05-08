@@ -1,3 +1,5 @@
+@import './theme'; 
+
 @mixin borderBox($border-box) {
   -webkit-box-sizing: $border-box;
   -moz-box-sizing: $border-box;
@@ -61,3 +63,28 @@ html, body {
     outline: hidden !important;
     box-shadow: none !important;
   }
+
+  .overlay {
+    background-color: $overlay;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999 !important;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    display: flex;
+
+    .loading-item {
+      background-color: $primaryColor;
+      color: $primaryColor;
+      z-index: 9999;
+    }
+  }
+
+  
+
+ 
+
+  

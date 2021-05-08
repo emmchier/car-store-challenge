@@ -1,0 +1,107 @@
+.detail-screen {
+    margin-top: 90px;
+    height: auto;
+    padding-bottom: 4rem;
+
+    .detail__slider-car-info {
+        padding-top: .8rem !important;
+    }
+
+    .detail__silder-car-name {
+        font-size: 1.2rem;
+        justify-content: center;
+        display: flex;
+        font-weight: 600;
+    }
+
+    .info-item {
+        margin-bottom: 30px;
+        img {
+            width: 30px;
+        }
+        p {
+            margin: 0;
+            margin-left: 10px;
+            color: $secondaryTextColor;
+        }
+    }
+
+    .icon-branch .info-item__icon,
+    .icon-file .info-item__icon {
+        width: 20px;
+    }
+
+    .info-item__info {
+        font-size: .8rem;
+    }
+
+    .detail__top-bar {
+        background-color: $secondaryDarkColor;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+
+        .detail__top-bar-content {
+            padding: 2rem 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .slash-sep {
+            margin: 0 10px;
+        }
+
+        .detail__top-bar-car-name {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .detail__btn-back,
+        .detail__top-bar-car-name {
+            color: $primaryColor !important;
+        }
+
+        .detail__btn-back {
+
+            .arrow-back-icon {
+                width: 20px !important;
+                margin-right: 10px;
+                font-size: 1.1rem;
+            }
+
+        }
+    }
+
+    .detail__sep-bottom {
+        margin-top: 0;
+    }
+
+    .detail__bottom-actions {
+        justify-content: center;
+        display: flex;
+
+        a {
+            color: $primaryColor; 
+            font-weight: 600;
+        }
+
+        span {
+            margin: 0 10px;
+            color: $primaryColor; 
+        }
+    }
+
+    .detail__form-header {
+        font-weight: 600;
+        color: $secondaryColor
+    }
+
+    .detail__form-desc {
+        color: $secondaryTextColor
+    }
+
+}

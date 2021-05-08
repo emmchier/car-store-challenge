@@ -10,10 +10,14 @@ export const getString = {
 
         home_btn_enter_store_title: 'INGRESAR A NISSAN STORE',
 
+        // Navbar //
+        navbar_search_placeholder: 'BUSCAR POR MODELO O VEHÍCULO',
+
         // Store Screen //
 
         store_banner_title: '¿CUÁL VA A SER TU PRÓXIMO NISSAN?',
         store_vehicles_text: 'VEHÍCULOS',
+        store_btn_filter_title: 'FILTROS',
         store_prices_description: `
             *Los precios expuestos en este catalogo son expresados en dólares americanos. 
             Los mismos incluyen IVA y podrán variar en función al modelo y/o versión elegida. 
@@ -60,8 +64,6 @@ export const getString = {
         filter_select_option3: 'RELEVANCIA',
         filter_select_option4: 'POR MODELO',
 
-
-
         // Car Models //
 
         // sedan
@@ -91,4 +93,16 @@ export const getString = {
         // qashqai
         filter_qashqai_lower: 'qashqai',
         filter_qashqai_upper: 'QASHQAI',
+
+        // Detail Screen //
+        detail_top_bar_back: 'VOLVER A LA TIENDA',
+        detail_top_bar_send_email: 'ENVIAR COTIZACIÓN POR MAIL',
+        detail_form_title: 'INGRESÁ TUS DATOS',
+        detail_form_description: 'Por favor completá el siguiente formulario para que uno de nuestros asesores se pueda contactar contigo',
+        detail_form_name: 'NOMBRE Y APELLIDO',
+        detail_form_email: 'CORREO ELECTRÓNICO',
+        detail_form_phone: 'TELÉFONO',
+        detail_form_send_title: 'ENVIARME LA COTIZACIÓN POR MAIL',
+        detail_slider_btn_data: 'VER TODAS LAS CARACTERÍSTICAS',
+        detail_slider_btn_gallery: 'VER GALERÍA DE IMÁGENES',
 }

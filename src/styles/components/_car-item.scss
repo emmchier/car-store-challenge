@@ -1,0 +1,85 @@
+.car-item {
+    border: 1px solid transparent;
+    border-radius: 15px !important;
+    padding: 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    color: $secondaryColor;
+
+    &:hover {
+        border: 1px solid $secondaryDarkColor;
+        transition: .5s ease-in-out !important;
+        border-radius: 15px !important;
+        color: $secondaryColor;
+      
+        .btn-icon {
+            animation: animate-arrow-right 1s ease-in-out;
+        }
+    }
+
+    .item__car-model {
+        justify-content: center;
+        display: flex;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+
+    .item_car-amount-container p {
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .item_car-amount-title {
+        font-size: .8rem;
+        font-weight: 600;
+        color: $secondaryTextColor;
+    }
+
+    .item_car-amount-price {
+        font-weight: 600;
+        color: $secondaryColor;
+    }
+
+    .btn-detail {
+        background-color: transparent;
+        color: $primaryColor;
+        padding: 10px 0 !important;
+        font-weight: 600;
+
+        &:active,
+        &:focus {
+            background-color: $whiteColor !important;
+            color: $primaryColor !important;
+        }
+    }
+
+    .item__footer-description {
+        font-size: .7rem;
+        margin-top: 10px;
+        color: $secondaryTextColor;
+    }
+}
+
+// media queries
+@media #{$mobile} {
+
+    .car-item {
+        border: 1px solid transparent;
+        border-radius: 15px !important;
+        padding: 0;
+        margin-bottom: 30px;
+        cursor: none;
+
+        &:hover {
+            border: 1px solid $secondaryDarkColor;
+            transition: .5s ease-in-out !important;
+            border-radius: 15px !important;
+            color: $secondaryColor;
+          
+            .btn-icon {
+                animation: animate-arrow-right 1s ease-in-out;
+            }
+        }
+    }
+}

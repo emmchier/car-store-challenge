@@ -1,12 +1,20 @@
 import React from 'react';
+
 import { useFetchCars } from '../../hooks/useFetchCars';
+import { useMediaQueries } from '../../hooks/useMediaQueries';
 import { getString } from '../../strings/getString';
 import { CarList } from '../cars/CarList';
 import { FilterBar } from '../filterbar/FilterBar';
+import { CustomBtn } from '../ui/customs/CustomBtn';
+
+import { mock } from '../../api/mock';
+import { Loading } from '../ui/Loading';
 
 export const StoreScreen = () => {
 
     const { data } = useFetchCars();
+
+    const { isMobile } = useMediaQueries();
 
     return (
         <section className="store-screen">
@@ -17,9 +25,21 @@ export const StoreScreen = () => {
             </div>
             <div className="container">
 
-                <h4> { data.length } { getString.store_vehicles_text }</h4>
-
-                <FilterBar />
+                <div className="store__top-bar pushAside alignX">
+                    <h4 className="store__vehicles"> 
+                        { !data ? mock.length : data.length } { getString.store_vehicles_text }
+                    </h4>
+                    { 
+                        isMobile && 
+                        <CustomBtn 
+                            btnTitle={ getString.store_btn_filter_title }
+                            classes={ 'btn-filter-res' }
+                            isHover={ false }
+                        /> 
+                    }
+                </div>
+                
+                { !isMobile && <FilterBar /> }
 
                 <CarList />
 

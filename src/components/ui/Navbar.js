@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import Logo from '../../assets/brand-logo.svg';
+import { getString } from '../../strings/getString';
+import { FormField } from './customs/FormField';
 
 export const Navbar = () => {
 
@@ -63,12 +65,13 @@ export const Navbar = () => {
                 <div className="navbar__search-bar">
                     <form className="form-inline my-2 my-lg-0">
                         <i className="material-icons reverseX">search</i>
-                        <input 
-                            className="form-control mr-sm-2" 
-                            type="search" 
-                            placeholder="BUSCAR POR MODELO O VEHÍCULO" 
-                            aria-label="Search"
-                            autoComplete="off" />
+                        <FormField
+                            showFormHeader={ false }
+                            showFormLabel={ false }
+                            formInputType={ 'search' }
+                            formInputClasses={ 'form-control' }
+                            formInputPlaceholder={ getString.navbar_search_placeholder }
+                        />
                     </form>
                 </div>
             </div>

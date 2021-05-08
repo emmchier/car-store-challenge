@@ -123,7 +123,7 @@ export const FilterBar = () => {
             </div>
             
             <div className="filter-order-by alignX">
-                <h4>ORDENAR:</h4>
+                <h4 className="filter-order__header">ORDENAR:</h4>
                 <FilterSelect 
                    filterSelects={[
                         { 

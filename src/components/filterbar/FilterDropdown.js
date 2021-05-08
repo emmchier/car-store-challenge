@@ -1,5 +1,6 @@
 import React from 'react';
-import { FilterFormItem } from './FilterFormItem';
+import { FormField } from '../ui/customs/FormField';
+
 import { FilterItem } from './FilterItem';
 import { FilterOptionItem } from './FilterOptionItem';
 
@@ -34,14 +35,14 @@ export const FilterDropdown = (props) => {
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
            
                 {   /* header */
-                    showHeader && <h4>{ filterHeader }</h4> 
+                    showHeader && <h4 className="drop-menu__header">{ filterHeader }</h4> 
                 }
                 {   /* forms */
                     showForms &&
                     <form class={ `filter-form ${ alignForms }` }>
                         {   
                             filterForms.map( (form, key) => (
-                                <FilterFormItem
+                                <FormField
                                     key={ key }
                                     showFormHeader={ form.showFormHeader }
                                     formHeader={ form.formHeader }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const FilterFormItem = ({
+export const FormField = ({
     showFormHeader,
     formHeader, 
     showFormLabel, 
@@ -9,13 +9,17 @@ export const FilterFormItem = ({
     formInputType,
     formInputClasses,
     formInputId,
-    formInputPlaceholder 
+    formInputName,
+    onSubmit,
+    onChange,
+    formInputPlaceholder,
+    ariaDescribedby
 }) => {
     return (
         <div class="form-group">
             {
                 showFormHeader &&
-                <h4>{ formHeader }</h4>
+                <h4 className="form-grup__header">{ formHeader }</h4>
             }
             {
                 showFormLabel &&
@@ -25,8 +29,13 @@ export const FilterFormItem = ({
                 type={ formInputType } 
                 class={ formInputClasses } 
                 id={ formInputId } 
+                name={ formInputName }
+                onSubmit={ onSubmit }
+                onChange={ onChange }
                 placeholder={ formInputPlaceholder }
-                autoComplete="off" />
+                autoComplete="off"
+                aria-describedby={ ariaDescribedby }
+                required />
         </div>
     )
 }

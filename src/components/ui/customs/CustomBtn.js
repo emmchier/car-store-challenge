@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const CustomBtn = ({ onClick, btnTitle, isHover, classes, to, btnIcon, isIconVisible }) => {
+export const CustomBtn = ({ onClick, btnTitle, isHover, classes, to, btnIcon, isIconVisible, btnType }) => {
     
     const [hover, setHover] = useState(true);
     
@@ -14,7 +14,8 @@ export const CustomBtn = ({ onClick, btnTitle, isHover, classes, to, btnIcon, is
             }
             onMouseEnter={() => { setHover( isHover ) }}
             onClick={ onClick }
-            to={ to }>
+            to={ to }
+            type={ btnType }>
             { btnTitle }
             { isIconVisible && <i className="material-icons btn-icon"> { btnIcon } </i> }
         </Link>

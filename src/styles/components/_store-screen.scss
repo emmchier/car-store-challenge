@@ -1,0 +1,77 @@
+.store-screen {
+    height: auto;
+    margin-bottom: 5rem;
+
+    .store__banner {
+        background-color: $secondaryDarkColor;
+        margin-top: 90px;
+
+        h2 {
+            font-weight: 900;
+            font-size: 3.1rem;
+            color: $whiteColor;
+            padding: 65px 0;
+        }
+    }
+
+    .store__top-bar {
+        margin-top: 2.5rem;
+    }
+
+    .store__vehicles {
+        color: $secondaryTextColor;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    } 
+
+    .car-list {
+        margin: 2rem 0;
+    }
+
+    .store__store-footer-description {
+        color: $secondaryTextColor;
+        font-size: .8rem;
+    }
+}
+
+// media queries
+@media #{$mobile} {
+    .store-screen {
+
+        .store__banner {
+            margin-top: 60px;
+
+            h2 {
+                font-size: 1.1rem;
+                justify-content: center;
+                display: flex;
+                margin: 0;
+                padding: 2rem 0;
+            }
+        }
+
+        .store__top-bar {
+            margin-top: 1.1rem;
+        }
+
+        .store__vehicles {
+            font-size: .9rem;
+        }
+
+        .btn-filter-res {
+            padding: 8px 12px !important;
+            border-radius: 8px;
+
+            &:focus,
+            &active {
+                background-color: $primaryColor !important;
+            }
+            
+        }
+    }
+}
+
+
+
+
+
