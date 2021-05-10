@@ -24,16 +24,12 @@ export const DetailSlider = ({ gallery }) => {
   
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const mockImageList = [
-    CarImg1, CarImg2, CarImg3, CarImg4
-  ];
-
     return (
       <>
       <Swiper 
         style={{
-          '--swiper-navigation-color': 
-          '#423A3D'
+          '--swiper-navigation-size': 
+          '35px'
         }} 
         loop={false} 
         spaceBetween={10} 

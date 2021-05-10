@@ -6,7 +6,7 @@ import { CustomBtn } from '../ui/customs/CustomBtn';
 export const HomeScreen = () => {
 
     return (
-        <section className="home-screen centerMiddle">
+        <section className="home-screen centerMiddle  animate__animated animate__fadeIn">
             <div className="container">
                 <div className="home-content">
                     <h1>Ahora <span>es online</span></h1>

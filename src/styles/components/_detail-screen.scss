@@ -105,3 +105,44 @@
     }
 
 }
+
+@media #{$mobile} {
+    .detail-screen {
+        margin-top: 60px;
+        padding-bottom: 0;
+
+        .detail__top-bar {
+            margin-bottom: 0;
+
+            .res {
+                display: block !important;
+    
+                p {
+                    font-size: 12px;
+                }
+            }
+    
+            .detail__top-bar-content {
+                padding: 12px 0 !important;
+    
+                .detail__btn-back .arrow_text,
+                .slash-sep {
+                    display: none;
+                }
+    
+            }
+    
+            .detail__top-bar-car-name,
+            .arrow-back-icon {
+                display: flex !important;
+            }
+
+        }
+
+        .detail__silder-car-name {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+    }
+}

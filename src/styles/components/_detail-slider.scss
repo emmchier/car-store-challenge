@@ -52,6 +52,11 @@
     border: 1px solid $secondaryDarkColor;
     border-radius: 10px;
     padding: 8px;
+
+    &:hover {
+      opacity: 1;
+    }
+
   }
 
   .mySwiper .swiper-slide-thumb-active {
@@ -60,4 +65,45 @@
     border-radius: 10px;
     padding: 8px;
     cursor: none !important;
+  }
+
+  .swiper-button-next, 
+  .swiper-button-prev {
+    background-image: none !important;
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondaryDarkColor;
+
+    &:hover {
+      color: $primaryColor;
+    }
+}
+
+  @media #{$mobile} {
+
+    .detail__bottom-actions {
+      margin-bottom: 3rem !important;
+    }
+
+    .detail__bottom-actions.alignX,
+    .detail__bottom-actions.alignX a {
+      display: block !important;
+    }
+
+    .detail__bottom-actions.alignX a {
+      margin: 25px 0;
+    }
+
+    span {
+      display: none;
+    }
+    
   }

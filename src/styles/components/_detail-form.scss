@@ -24,3 +24,25 @@
         }
     }
 }
+
+@media #{$mobile} {
+
+    .detail__form-header {
+        font-size: 1.5rem;
+    }
+
+    .detail-form .form-group input {
+        padding: 25px 15px !important;
+
+        &::placeholder {
+            font-size: 12px !important;
+        }
+    }
+
+    .detail-form .btn-submit {
+        font-size: .8rem;
+        padding: 1rem !important;
+        margin-top: 1.5rem;
+    }
+
+}

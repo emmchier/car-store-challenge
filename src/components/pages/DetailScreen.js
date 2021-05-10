@@ -30,7 +30,7 @@ export const DetailScreen = () => {
     } = mock[carId];
 
     return (
-        <section className="detail-screen">
+        <section className="detail-screen animate__animated animate__fadeIn">
 
             {/* <DetailTopBar carModel={ isMock ? model : car.model } /> */}
             <DetailTopBar carModel={ model } />

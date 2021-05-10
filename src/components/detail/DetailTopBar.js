@@ -13,13 +13,15 @@ export const DetailTopBar = ({ carModel }) => {
                         to="/store">
                         <span className="detail__btn-back alignX">
                             <i className="material-icons arrow-back-icon">arrow_backward</i>
-                            { getString.detail_top_bar_back } 
+                            <span className="arrow_text">{ getString.detail_top_bar_back }</span> 
                         </span>
                     </Link>
                     <span className="slash-sep">/</span> 
-                    <h2 className="detail__top-bar-car-name">{ carModel }</h2>
-                    <span className="slash-sep">/</span>
-                    <p> { getString.detail_top_bar_send_email }</p>
+                    <span className="res alignX">
+                        <h2 className="detail__top-bar-car-name">{ carModel }</h2>
+                        <span className="slash-sep">/</span>
+                        <p> { getString.detail_top_bar_send_email }</p>
+                    </span>
                 </div>
             </div>
         </div>

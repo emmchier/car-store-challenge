@@ -8,7 +8,6 @@ import { FilterBar } from '../filterbar/FilterBar';
 import { CustomBtn } from '../ui/customs/CustomBtn';
 
 import { mock } from '../../api/mock';
-import { Loading } from '../ui/Loading';
 
 export const StoreScreen = () => {
 
@@ -17,7 +16,7 @@ export const StoreScreen = () => {
     const { isMobile } = useMediaQueries();
 
     return (
-        <section className="store-screen">
+        <section className="store-screen animate__animated animate__fadeIn">
             <div className="store__banner">
                 <div className="container">
                     <h2>{ getString.store_banner_title }</h2>
