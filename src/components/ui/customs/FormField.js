@@ -16,7 +16,7 @@ export const FormField = ({
     ariaDescribedby
 }) => {
     return (
-        <div class="form-group">
+        <div className="form-group">
             {
                 showFormHeader &&
                 <h4 className="form-grup__header">{ formHeader }</h4>
@@ -27,7 +27,7 @@ export const FormField = ({
             }
             <input 
                 type={ formInputType } 
-                class={ formInputClasses } 
+                className={ formInputClasses } 
                 id={ formInputId } 
                 name={ formInputName }
                 onSubmit={ onSubmit }

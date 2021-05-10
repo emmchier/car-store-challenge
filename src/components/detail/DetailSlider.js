@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -37,16 +37,16 @@ export const DetailSlider = ({ gallery }) => {
         thumbs={{ swiper: thumbsSwiper }} 
         className="mySwiper2">
           <SwiperSlide>
-            <img src={ CarImg1 } />
+            <img src={ CarImg1 } alt="show a car img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ CarImg2 } />
+            <img src={ CarImg2 } alt="show a car img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ CarImg3 } />
+            <img src={ CarImg3 } alt="show a car img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ CarImg4 } />
+            <img src={ CarImg4 } alt="show a car img" />
           </SwiperSlide>    
         </Swiper>
         <Swiper 
@@ -59,16 +59,16 @@ export const DetailSlider = ({ gallery }) => {
           watchSlidesProgress={true} 
           className="mySwiper">
             <SwiperSlide>
-            <img src={ CarImg1 } />
+            <img src={ CarImg1 } alt="show a car img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ CarImg2 } />
+            <img src={ CarImg2 } alt="show a car img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ CarImg3 } />
+            <img src={ CarImg3 } alt="show a car img" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ CarImg4 } />
+            <img src={ CarImg4 } alt="show a car img" />
           </SwiperSlide>
         </Swiper>
         </>

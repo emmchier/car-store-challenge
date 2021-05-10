@@ -39,7 +39,7 @@ export const FilterDropdown = (props) => {
                 }
                 {   /* forms */
                     showForms &&
-                    <form class={ `filter-form ${ alignForms }` }>
+                    <form className={ `filter-form ${ alignForms }` }>
                         {   
                             filterForms.map( (form, key) => (
                                 <FormField

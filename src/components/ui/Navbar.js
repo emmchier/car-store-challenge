@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Logo from '../../assets/brand-logo.svg';
 import { getString } from '../../strings/getString';
@@ -26,11 +26,11 @@ export const Navbar = () => {
             scrollPosition > 0 
             ? 'navbar fixed-top navbar-expand-lg navbar-light bg-light navbar fixed-top navbar-expand-lg showBackground main-elevation' 
             : 'navbar fixed-top navbar-expand-lg navbar-light bg-light' }>
-            <Link 
+            <NavLink 
                 className={ scrollPosition > 0 ? 'navbar-brand resizeLogo' : 'navbar-brand' } 
                 to="/">
                 <img src={ Logo } alt={ 'show Nissan brand logo' }/>
-            </Link>
+            </NavLink>
             <button 
                 className="navbar-toggler" 
                 type="button" 

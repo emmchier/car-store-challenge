@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const CustomBtn = ({ onClick, btnTitle, isHover, classes, to, btnIcon, isIconVisible, btnType }) => {
+export const CustomBtn = ( props ) => {
+
+    const {
+        onClick, 
+        btnTitle, 
+        isHover, 
+        classes, 
+        to, 
+        btnIcon, 
+        isIconVisible, 
+        btnType
+    } = props;
     
     const [hover, setHover] = useState(true);
     

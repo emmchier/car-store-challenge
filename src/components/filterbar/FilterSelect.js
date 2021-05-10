@@ -4,7 +4,7 @@ import { FilterSelectItem } from './FilterSelectItem';
 export const FilterSelect = ({ filterSelects }) => {
 
     return (
-        <select class="filter-selects form-select my-1 mr-sm-2">
+        <select className="filter-selects form-select my-1 mr-sm-2">
             {   
                 filterSelects.map( (select, key) => (
                     <FilterSelectItem

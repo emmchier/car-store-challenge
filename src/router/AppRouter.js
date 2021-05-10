@@ -26,8 +26,8 @@ export const AppRouter = () => {
               <Route exact path="/" component={ HomeScreen } />
               <Route exact path="/store" component={ StoreScreen } />
               <Route exact path="/cars/:carId" component={ DetailScreen } />
-              
-              <Redirect exact path="/" />
+
+              <Redirect to="/" />
             </Switch>
             <Footer />
         </Router>

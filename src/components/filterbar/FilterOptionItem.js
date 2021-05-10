@@ -11,14 +11,14 @@ export const FilterOptionItem = (props) => {
     return (
         <div class="form-check">
             <input 
-                class="filter-option-input form-check-input" 
+                className="filter-option-input form-check-input" 
                 type={ optionInputType } 
                 name={ optionInputId } 
                 id={ optionInputId } 
                 value={ optionInputId } />
             <label 
-                class="filter-option-label form-check-label" 
-                for={ optionInputId }>
+                className="filter-option-label form-check-label" 
+                htmlFor={ optionInputId }>
                     { optionLabelTitle }
             </label>
         </div>

@@ -4,11 +4,10 @@ import { useFetchCars } from '../../hooks/useFetchCars';
 import { CarItem } from './CarItem';
 
 import { mock } from '../../api/mock';
-import { Loading } from '../ui/Loading';
 
 export const CarList = () => {
 
-    const { data, loading } = useFetchCars();
+    const { data } = useFetchCars();
 
     console.log(data);
     
